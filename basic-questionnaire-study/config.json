@@ -1,0 +1,108 @@
+{
+  "$schema": "https://raw.githubusercontent.com/reVISit-studies/study/main/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Basic Questionnaire Study",
+    "version": "pilot",
+    "authors": [
+      "The reVISit Team"
+    ],
+    "date": "2024-03-19",
+    "description": "A simple questionnaire study",
+    "organizations": [
+      "University of Utah",
+      "WPI",
+      "University of Toronto"
+    ]
+  },
+  "uiConfig": {
+    "contactEmail": "contact@revisit.dev",
+    "helpTextPath": "basic-questionnaire-study/assets/help.md",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "sidebar": true
+  },
+  "baseComponents": {
+    "barChart": {
+      "instructionLocation": "sidebar"
+    },
+    "pieChart": {
+      "instructionLocation": "sidebar"
+    }
+  },
+  "components": {
+    "introduction": {
+      "type": "markdown",
+      "path": "basic-questionnaire-study/assets/introduction.md",
+      "response": []
+    },
+    "salaryDataChart": {
+      "instructionLocation": "sidebar",
+      "type": "react-component",
+      "path": "basic-questionnaire-study/SalaryDataChart.tsx",
+      "parameters": {
+        "data": "data/salary_data.csv"
+      },
+      "meta": {
+        "difficulty": 3,
+        "chart": "bar"
+      },
+      "description": "Salary distribution across user IDs",
+      "instruction": "Each bar represents the salary for a specific student. What patterns do you observe in salary distribution?",
+      "response": []
+    },
+    "textResponse": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "q1-observations",
+          "prompt": "Please write your observations or patterns you see in the preceding diagram.",
+          "required": true,
+          "location": "aboveStimulus",
+          "type": "longText",
+          "placeholder": "Write your response here"
+        }
+      ]
+    },
+    "pieDataChart": {
+      "instructionLocation": "sidebar",
+      "type": "react-component",
+      "path": "basic-questionnaire-study/SalaryDataChartPie.tsx",
+      "parameters": {
+        "data": "data/salary_data.csv"
+      },
+      "meta": {
+        "difficulty": 2,
+        "chart": "pie"
+      },
+      "description": "Distribution of different categories in a pie chart",
+      "instruction": "Observe the proportions of each category in this pie chart. What trends or differences do you notice?",
+      "response": []
+    },
+    "pieChartResponse": {
+      "type": "questionnaire",
+      "response": [
+        {
+          "id": "q2-observations",
+          "prompt": "Please write your observations or patterns you see in the pie chart.",
+          "required": true,
+          "location": "aboveStimulus",
+          "type": "longText",
+          "placeholder": "Write your response here"
+        }
+      ]
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "introduction",
+      "salaryDataChart",
+      "textResponse",
+      "pieDataChart",
+      "pieChartResponse"
+    ]
+  }
+}
+
+
