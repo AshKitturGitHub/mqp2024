@@ -3,14 +3,21 @@
 import { Loader } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import * as d3 from 'd3';
-import { StimulusParams } from '../../../store/types';
+import { StimulusParams } from 'mqp2024/store/types';
+
+
+// Define the type for salary data
+interface SalaryData {
+  userID: number;
+  salary: number;
+}
 
 export function BrushPlot({ parameters }: StimulusParams<{ data: string }>) {
-  const [data, setData] = useState<any[] | null>(null);
+  const [data, setData] = useState<SalaryData[] | null>(null);
 
   // Load data
   useEffect(() => {
-    d3.csv(parameters.data, (d) => ({
+    d3.csv<SalaryData>(parameters.data, (d) => ({
       userID: +d["User ID"],  // Convert to number
       salary: +d["Salary Value"]  // Convert to number
     })).then((_data) => {
@@ -34,7 +41,6 @@ export function BrushPlot({ parameters }: StimulusParams<{ data: string }>) {
         .append("g")
         .attr("transform", `translate(${margin.left},${margin.top})`);
 
-
       const xScale = d3.scaleBand()
         .domain(data.map(d => d.userID.toString()))
         .range([0, width])
@@ -43,7 +49,6 @@ export function BrushPlot({ parameters }: StimulusParams<{ data: string }>) {
       const yScale = d3.scaleLinear()
         .domain([0, d3.max(data, d => d.salary)!])
         .range([height, 0]);
-
 
       svg.selectAll(".bar")
         .data(data)
