@@ -52,7 +52,7 @@ export function ProtectedRoute({ children, paramToCheck, paramCallback }: Protec
     };
 
     verifyUser();
-  }, [user.isAdmin, isEnabled]);
+  }, [logout, paramCallback, paramToCheck, params, user, verifyAdminStatus, isEnabled]);
 
   if (user.determiningStatus || !storageEngine) {
     return <LoadingOverlay visible={user.determiningStatus || !storageEngine?.getEngine()} />;

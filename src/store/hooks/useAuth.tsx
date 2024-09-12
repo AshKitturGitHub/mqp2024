@@ -1,6 +1,6 @@
 import {
   createContext, useContext, useMemo, ReactNode,
-  useEffect, useState,
+  useEffect, useState, useCallback,
 } from 'react';
 import {
   getAuth, onAuthStateChanged, User, signOut, Auth,
@@ -16,7 +16,7 @@ interface AuthContextValue {
   logout: () => Promise<void>;
   triggerAuth: () => void;
   verifyAdminStatus: (inputUser: UserWrapped) => Promise<boolean>;
-  }
+}
 
 // Initializes AuthContext
 const AuthContext = createContext<AuthContextValue>({
@@ -30,32 +30,31 @@ const AuthContext = createContext<AuthContextValue>({
   logout: async () => {},
   triggerAuth: () => {},
   verifyAdminStatus: () => Promise.resolve(false),
-
 });
 
 // Firebase auth context
 export const useAuth = () => useContext(AuthContext);
 
 // Defines the functions that are exposed in this hook.
-export function AuthProvider({ children } : { children: ReactNode }) {
-  // Default non-user when loading
-  const loadingNullUser : UserWrapped = {
+export function AuthProvider({ children }: { children: ReactNode }) {
+  // Memoize loadingNullUser to prevent it from changing on every render
+  const loadingNullUser: UserWrapped = useMemo(() => ({
     user: null,
     determiningStatus: true,
     isAdmin: false,
     adminVerification: false,
-  };
+  }), []);
 
-  // Default non-user when not loading
-  const nonLoadingNullUser : UserWrapped = {
+  // Memoize nonLoadingNullUser to prevent it from changing on every render
+  const nonLoadingNullUser: UserWrapped = useMemo(() => ({
     user: null,
     determiningStatus: false,
     isAdmin: false,
     adminVerification: false,
-  };
+  }), []);
 
-  // Non-auth User
-  const nonAuthUser : UserWrapped = {
+  // Memoize nonAuthUser to prevent it from changing on every render
+  const nonAuthUser: UserWrapped = useMemo(() => ({
     user: {
       name: 'fakeName',
       email: 'fakeEmail@fake.com',
@@ -64,35 +63,39 @@ export function AuthProvider({ children } : { children: ReactNode }) {
     determiningStatus: false,
     isAdmin: true,
     adminVerification: true,
-  };
+  }), []);
 
   const [user, setUser] = useState(loadingNullUser);
   const [enableAuthTrigger, setEnableAuthTrigger] = useState(false);
   const { storageEngine } = useStorageEngine();
 
-  // Logs the user out by removing the user and navigating to '/login'
-  const logout = async () => {
+  // Use useCallback for logout to prevent it from changing on every render
+  const logout = useCallback(async () => {
     const auth = getAuth();
     try {
       await signOut(auth);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (error: any) {
-      console.error(`There was an issue signing-out the user: ${error.message}`);
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        console.error(`There was an issue signing-out the user: ${error.message}`);
+      } else {
+        console.error('An unknown error occurred during sign-out.');
+      }
     } finally {
       setUser(nonLoadingNullUser);
     }
-  };
+  }, [nonLoadingNullUser]);
 
   const triggerAuth = () => {
     setEnableAuthTrigger(true);
   };
 
-  const verifyAdminStatus = async (inputUser: UserWrapped) => {
+  // Use useCallback for verifyAdminStatus to prevent it from changing on every render
+  const verifyAdminStatus = useCallback(async (inputUser: UserWrapped) => {
     if (storageEngine) {
       return await storageEngine.validateUser(inputUser);
     }
     return false;
-  };
+  }, [storageEngine]);
 
   useEffect(() => {
     // Set initialUser
@@ -154,18 +157,18 @@ export function AuthProvider({ children } : { children: ReactNode }) {
     return () => {
       cleanupPromise.then((cleanup) => cleanup());
     };
-  }, [storageEngine, enableAuthTrigger]);
+  }, [loadingNullUser, logout, nonAuthUser, verifyAdminStatus, storageEngine, enableAuthTrigger]);
 
-  const value = useMemo(() => ({
+  const memoizedValue = useMemo(() => ({
     user,
     triggerAuth,
     logout,
     verifyAdminStatus,
-  }), [user]);
+  }), [user, logout, verifyAdminStatus]);
 
   return (
-    <AuthContext.Provider value={value}>
-      {user.determiningStatus ? <LoadingOverlay visible /> : children }
+    <AuthContext.Provider value={memoizedValue}>
+      {user.determiningStatus ? <LoadingOverlay visible /> : children}
     </AuthContext.Provider>
   );
 }
