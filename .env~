@@ -10,5 +10,5 @@ VITE_FIREBASE_CONFIG='
  measurementId: "G-KJDFNDRTV1"
 }
 '
-VITE_STORAGE_ENGINE="firebase" # "firebase" or "localStorage" or your own custom storage engine
+VITE_STORAGE_ENGINE="localStorage" # "firebase" or "localStorage" or your own custom storage engine
 VITE_RECAPTCHAV3TOKEN="6Le2EEEqAAAAAJnnUXV5ch7hD0DjxLgN3PZsIq5g" # recaptcha SITE KEY
