@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { Loader } from '@mantine/core';
+import { Loader, Button } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import * as d3 from 'd3';
 
-// Define the type for salary data
 interface SalaryData {
   userID: number;
   salary: number;
@@ -16,14 +15,12 @@ export function PieChart({ parameters, setAnswer }: { parameters: { data: string
   // Load data
   useEffect(() => {
     d3.csv<SalaryData>(parameters.data, (d) => ({
-      userID: +d['User ID'], // Convert to number
-      salary: +d['Salary Value'], // Convert to number
+      userID: +d['User ID'],
+      salary: +d['Salary Value'],
     })).then((_data) => {
       setData(_data);
-      // Set the answer to reflect the data load
-      setAnswer({ status: true, answers: { salaryData: _data } });
     });
-  }, [parameters, setAnswer]);
+  }, [parameters]);
 
   useEffect(() => {
     if (data) {
@@ -65,11 +62,26 @@ export function PieChart({ parameters, setAnswer }: { parameters: { data: string
     }
   }, [data]);
 
-  return data ? (
-    <div id="pie-chart" style={{ height: 400, width: 800 }}>
-      {}
+  const handleSubmit = () => {
+    if (data) {
+      setAnswer({ status: true, answers: { salaryData: data } });
+    }
+  };
+
+  return (
+    <div>
+      {data ? (
+        <>
+          <div id="pie-chart" style={{ height: 400, width: 800 }}>
+            {}
+          </div>
+          <Button onClick={handleSubmit}>Submit Data</Button>
+        </>
+      ) : (
+        <Loader />
+      )}
     </div>
-  ) : <Loader />;
+  );
 }
 
 export default PieChart;
