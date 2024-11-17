@@ -488,19 +488,14 @@
       "introduction",
       "introduction_2",
       "tutorial",
-      {
-        "order": "random",
-        "components": [
-          "paintBrush_q1",
-          "paintBrush_q2",
-          "rectangleBrush_q1",
-          "rectangleBrush_q2",
-          "axisBrush_q1",
-          "axisBrush_q2",
-          "sliderBrush_q1",
-          "sliderBrush_q2"
-        ]
-      },
+      "paintBrush_q1",
+      "paintBrush_q2",
+      "rectangleBrush_q1",
+      "rectangleBrush_q2",
+      "axisBrush_q1",
+      "axisBrush_q2",
+      "sliderBrush_q1",
+      "sliderBrush_q2",
       "post-study-survey",
       "survey"
     ]
