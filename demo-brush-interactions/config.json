@@ -567,88 +567,126 @@
         }
       ]
     },
-    "post-study-survey": {
-      "type": "questionnaire",
-      "response": [
-        {
-          "id": "q1",
-          "prompt": "How useful did you find the rectangular selection method? ",
-          "required": true,
-          "location": "aboveStimulus",
-          "type": "likert",
-          "numItems": 7,
-          "rightLabel": "Like",
-          "leftLabel": "Dislike"
-        },
-        {
-          "id": "q2",
-          "prompt": "How useful did you find the axis-aligned selection? ",
-          "required": true,
-          "location": "aboveStimulus",
-          "type": "likert",
-          "numItems": 7,
-          "rightLabel": "Like",
-          "leftLabel": "Dislike"
-        },
-        {
-          "id": "q3",
-          "prompt": "How useful did you find the paint-brush selection?",
-          "required": true,
-          "location": "aboveStimulus",
-          "type": "likert",
-          "numItems": 7,
-          "rightLabel": "Like",
-          "leftLabel": "Dislike"
-        },
-        {
-          "id": "q4",
-          "prompt": "How useful did you find the slider selection?",
-          "required": true,
-          "location": "aboveStimulus",
-          "type": "likert",
-          "numItems": 7,
-          "rightLabel": "Like",
-          "leftLabel": "Dislike"
-        },
-        {
-          "id": "q5",
-          "prompt": "Please provide any comments about the different methods",
-          "required": false,
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your comments here"
-        }
-      ]
-    },
-    "end_survey": {
+    "demographics": {
       "type": "markdown",
-      "path": "demo-brush-interactions/assets/end_survey.md",
+      "path": "demo-brush-interactions/assets/demographics.md",
       "response": [
         {
-          "id": "end_survey",
-          "prompt": "What did you think this survey was about?",
+          "id": "year-born-response",
+          "prompt": "What year were you born?",
           "required": true,
           "location": "belowStimulus",
-          "type": "longText"
+          "type": "shortText"
         },
         {
-          "id": "end_survey",
-          "prompt": "Any comments regarding the survey?",
-          "required": true,
-          "location": "belowStimulus",
-          "type": "longText"
-        },
-        {
-          "id": "end_survey",
-          "prompt": "Have you seen any of these questions before?",
+          "id": "gender-response",
+          "prompt": "What is your gender?",
           "required": true,
           "location": "belowStimulus",
           "type": "radio",
           "options": [
-            "Yes, definetly",
-            "Yes, but only the demographic questions",
-            "Maybe / I'm not sure",
-            "No"
+            "Man",
+            "Woman",
+            "Non-binary",
+            "Prefer not to disclose",
+            "Other"
+          ]
+        },
+        {
+          "id": "political-response",
+          "prompt": "What is the highest level of school you have completed or the highest degree you have received?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "Less than high school degree",
+            "High school graduate (high school diploma or equivalent including GED)",
+            "Some college but no degree",
+            "Associate degree in college (2-year)",
+            "Bachelor's degree in college (4-year)",
+            "Master's degree",
+            "Doctoral degree",
+            "Professional degree (JD, MD)",
+            "Prefer not to answer"
+          ]
+        },
+        {
+          "id": "political-response",
+          "prompt": "On this 7-point scale of political views from extremely liberal (left) to  extremely conservative (right) where would you place yourself on this scale?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
+        },
+        {
+          "id": "statistics-response",
+          "prompt": "How many years of experiences do you have studying statistics? (enter a number)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText"
+        },
+        {
+          "id": "research-response",
+          "prompt": "How many years of experiences do you have doing research? (enter a number)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText"
+        },
+        {
+          "id": "correlation-response",
+          "prompt": "How well do you understand correlation?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "Extremely Well",
+            "Very Well",
+            "Moderately Well",
+            "Slightly Well",
+            "Not Well at All"
+          ]
+        }
+      ]
+    },
+    "specific-added-questions": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/specific-added-questions.md",
+      "response": [
+        {
+          "id": "specific-statistics-response",
+          "prompt": "How many years of experiences do you have studying statistics (e.g. doing experiments in a lab, collecting and analyzing data)? (enter a number)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText"
+        },
+        {
+          "id": "specific-research-response",
+          "prompt": "How many years of experiences do you have doing research (e.g. self-taught, taking classes)? (enter a number)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText"
+        },
+        {
+          "id": "correlation-response",
+          "prompt": "How well do you understand correlation, after completing the training and tasks within this survey?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "Extremely Well",
+            "Very Well",
+            "Moderately Well",
+            "Slightly Well",
+            "Not Well at All"
           ]
         }
       ]
@@ -677,8 +715,8 @@
       "q6",
       "q7",
       "q8",
-      "post-study-survey",
-      "end_survey"
+      "demographics",
+      "specific-added-questions"
     ]
   }
 }
