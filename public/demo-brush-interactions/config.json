@@ -46,6 +46,24 @@
         }
       ]
     },
+    "introduction_2": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/introduction_2.md",
+      "response": [
+        {
+          "id": "max-response",
+          "prompt": "We will ask you to answer short questions about _____.",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "tables",
+            "graphs",
+            "images"
+          ]
+        }
+      ]
+    },
     "tutorial": {
       "type": "markdown",
       "path": "demo-brush-interactions/assets/tutorial.md",
@@ -454,6 +472,7 @@
     "order": "fixed",
     "components": [
       "introduction",
+      "introduction_2",
       "tutorial",
       {
         "order": "random",
