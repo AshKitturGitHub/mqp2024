@@ -67,9 +67,23 @@
     "tutorial": {
       "type": "markdown",
       "path": "demo-brush-interactions/assets/tutorial.md",
-      "nextButtonText": "",
-      "response": []
-    },
+      "nextButtonText": "Next",
+      "response": [
+        {
+          "id": "correlationQuestion",
+          "prompt": "Compare the two correlations seen above. Which is stronger?",
+          "required": true,
+          "type": "radio",
+          "options": [
+            "Correlation: 0.3",
+            "Correlation: -0.3",
+            "They are equal."
+          ]
+        }
+      ]
+    }
+
+  ,
     "rectangleBrush_q1": {
       "baseComponent": "scatterPlot",
       "instruction": "How many cars from Japan have a Miles Per Gallon value greater than 35?",
