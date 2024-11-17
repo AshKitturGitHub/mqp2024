@@ -82,6 +82,58 @@
         }
       ]
     },
+    "understanding_test_1": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/understanding_test_1.md",
+      "nextButtonText": "Next",
+      "response": [
+        {
+          "id": "correlationQuestion",
+          "prompt": "How correlated do you think the data looks?",
+          "required": true,
+          "type": "radio",
+          "options": [
+            "0",
+            "0.1",
+            "0.2",
+            "0.3",
+            "0.4",
+            "0.5",
+            "0.6",
+            "0.7",
+            "0.8",
+            "0.9",
+            "1"
+          ]
+        }
+      ]
+    },
+    "understanding_test_2": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/understanding_test_2.md",
+      "nextButtonText": "Next",
+      "response": [
+        {
+          "id": "correlationQuestion",
+          "prompt": "How correlated do you think the data looks?",
+          "required": true,
+          "type": "radio",
+          "options": [
+            "-1",
+            "-0.9",
+            "-0.8",
+            "-0.7",
+            "-0.6",
+            "-0.5",
+            "-0.4",
+            "-0.3",
+            "-0.2",
+            "-0.1",
+            "0"
+          ]
+        }
+      ]
+    },
     "intro_to_graphs": {
       "type": "markdown",
       "path": "demo-brush-interactions/assets/introToGraphs.md",
@@ -267,6 +319,8 @@
       "introduction",
       "introduction_2",
       "instructions",
+      "understanding_test_1",
+      "understanding_test_2",
       "q1",
       "q2",
       "q3",
