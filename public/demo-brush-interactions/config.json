@@ -64,7 +64,7 @@
         }
       ]
     },
-    "tutorial": {
+    "instructions": {
       "type": "markdown",
       "path": "demo-brush-interactions/assets/tutorial.md",
       "nextButtonText": "Next",
@@ -81,9 +81,24 @@
           ]
         }
       ]
-    }
-
-  ,
+    },
+    "intro_to_graphs": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/introToGraphs.md",
+      "response": [
+        {
+          "id": "max-response",
+          "prompt": "Will you receive feedback after selecting your answer?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    },
     "rectangleBrush_q1": {
       "baseComponent": "scatterPlot",
       "instruction": "How many cars from Japan have a Miles Per Gallon value greater than 35?",
@@ -487,7 +502,8 @@
     "components": [
       "introduction",
       "introduction_2",
-      "tutorial",
+      "instructions",
+      "intro_to_graphs",
       {
         "order": "random",
         "components": [
