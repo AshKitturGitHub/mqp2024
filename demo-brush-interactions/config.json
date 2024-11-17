@@ -64,7 +64,7 @@
         }
       ]
     },
-    "tutorial": {
+    "instructions": {
       "type": "markdown",
       "path": "demo-brush-interactions/assets/tutorial.md",
       "nextButtonText": "Next",
@@ -81,320 +81,99 @@
           ]
         }
       ]
-    }
-
-  ,
-    "rectangleBrush_q1": {
-      "baseComponent": "scatterPlot",
-      "instruction": "How many cars from Japan have a Miles Per Gallon value greater than 35?",
-      "parameters": {
-        "dataset": "cars",
-        "x": "Miles per Gallon",
-        "y": "Weight (lbs)",
-        "category": "Origin",
-        "ids": "id",
-        "brushType": "Rectangular Selection"
-      },
+    },
+    "intro_to_graphs": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/introToGraphs.md",
       "response": [
         {
-          "id": "response",
-          "prompt": "Answer:",
+          "id": "max-response",
+          "prompt": "Will you receive feedback after selecting your answer?",
           "required": true,
-          "location": "sidebar",
-          "type": "numerical",
-          "max": 100,
-          "min": 0
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": "response",
-          "answer": 17
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "Yes",
+            "No"
+          ]
         }
       ]
     },
-    "rectangleBrush_q2": {
-      "baseComponent": "scatterPlot",
-      "instruction": "Consider only cars that have a miles per gallon value greater than 30 AND weigh more than 2000 pounds. Which country or region produces the most and the least of these cars?",
-      "parameters": {
-        "dataset": "cars",
-        "x": "Miles per Gallon",
-        "y": "Weight (lbs)",
-        "category": "Origin",
-        "ids": "id",
-        "brushType": "Rectangular Selection"
-      },
+    "q1": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/q1.md",
       "response": [
         {
-          "id": "max-response",
-          "prompt": "Most Cars:",
+          "id": "q1-response",
+          "prompt": "How correlated do you think the data looks?",
           "required": true,
-          "location": "sidebar",
-          "type": "dropdown",
+          "location": "belowStimulus",
+          "type": "radio",
           "options": [
-            "Europe",
-            "Japan",
-            "USA"
+            "0",
+            "0.1",
+            "0.2",
+            "0.3",
+            "0.4",
+            "0.5",
+            "0.6",
+            "0.7",
+            "0.8",
+            "0.9",
+            "1"
           ]
-        },
-        {
-          "id": "min-response",
-          "prompt": "Least Cars:",
-          "required": true,
-          "location": "sidebar",
-          "type": "dropdown",
-          "options": [
-            "Europe",
-            "Japan",
-            "USA"
-          ]
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": "max-response",
-          "answer": "Japan"
-        },
-        {
-          "id": "min-response",
-          "answer": "Europe"
         }
       ]
     },
-    "axisBrush_q1": {
-      "baseComponent": "scatterPlot",
-      "instruction": "How many days from September to the end of the year is it sunny?",
-      "parameters": {
-        "dataType": "date",
-        "dataset": "weather",
-        "x": "Date",
-        "y": "Maximum Temperature",
-        "category": "Weather",
-        "ids": "id",
-        "brushType": "Axis Selection"
-      },
+    "q2": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/q1.md",
       "response": [
         {
-          "id": "response",
-          "prompt": "Answer:",
+          "id": "q2-response",
+          "prompt": "How correlated do you think the data looks?",
           "required": true,
-          "location": "sidebar",
-          "type": "numerical",
-          "max": 100,
-          "min": 0
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": "response",
-          "answer": 32
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "0",
+            "0.1",
+            "0.2",
+            "0.3",
+            "0.4",
+            "0.5",
+            "0.6",
+            "0.7",
+            "0.8",
+            "0.9",
+            "1"
+          ]
         }
       ]
     },
-    "axisBrush_q2": {
-      "baseComponent": "scatterPlot",
-      "instruction": "Consider only days between June and October with temperatures above 20 degrees. What are the most and least common weather types during those days?",
-      "parameters": {
-        "dataType": "date",
-        "dataset": "weather",
-        "x": "Date",
-        "y": "Maximum Temperature",
-        "category": "Weather",
-        "ids": "id",
-        "brushType": "Axis Selection"
-      },
+    "q3": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/q3.md",
       "response": [
         {
-          "id": "max-response",
-          "prompt": "Most common Weather:",
+          "id": "q3-response",
+          "prompt": "How correlated do you think the data looks?",
           "required": true,
-          "location": "sidebar",
-          "type": "dropdown",
+          "location": "belowStimulus",
+          "type": "radio",
           "options": [
-            "drizzle",
-            "fog",
-            "rain",
-            "sun"
+            "0",
+            "0.1",
+            "0.2",
+            "0.3",
+            "0.4",
+            "0.5",
+            "0.6",
+            "0.7",
+            "0.8",
+            "0.9",
+            "1"
           ]
-        },
-        {
-          "id": "min-response",
-          "prompt": "Least common Weather:",
-          "required": true,
-          "location": "sidebar",
-          "type": "dropdown",
-          "options": [
-            "drizzle",
-            "fog",
-            "rain",
-            "sun"
-          ]
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": "max-response",
-          "answer": "sun"
-        },
-        {
-          "id": "min-response",
-          "answer": "drizzle"
-        }
-      ]
-    },
-    "sliderBrush_q1": {
-      "baseComponent": "scatterPlot",
-      "instruction": "How many Gentoo penguins weigh less than 4.5k grams (g)?",
-      "parameters": {
-        "dataset": "penguin",
-        "x": "Body Mass (g)",
-        "y": "Flipper Length (mm)",
-        "category": "Species",
-        "ids": "id",
-        "brushType": "Slider Selection"
-      },
-      "response": [
-        {
-          "id": "response",
-          "prompt": "Answer:",
-          "required": true,
-          "location": "sidebar",
-          "type": "numerical",
-          "max": 100,
-          "min": 0
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": "response",
-          "answer": 15
-        }
-      ]
-    },
-    "sliderBrush_q2": {
-      "baseComponent": "scatterPlot",
-      "instruction": "Consider only penguins that weigh between 4k and 5k grams (g) and have flipper lengths between 200 and 215mm. What is the most and least common type of penguin in this subset?",
-      "parameters": {
-        "dataset": "penguin",
-        "x": "Body Mass (g)",
-        "y": "Flipper Length (mm)",
-        "category": "Species",
-        "ids": "id",
-        "brushType": "Slider Selection"
-      },
-      "response": [
-        {
-          "id": "max-response",
-          "prompt": "Most common Penguin:",
-          "required": true,
-          "location": "sidebar",
-          "type": "dropdown",
-          "options": [
-            "Adelie",
-            "Chinstrap",
-            "Gentoo"
-          ]
-        },
-        {
-          "id": "min-response",
-          "prompt": "Least common Penguin:",
-          "required": true,
-          "location": "sidebar",
-          "type": "dropdown",
-          "options": [
-            "Adelie",
-            "Chinstrap",
-            "Gentoo"
-          ]
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": "max-response",
-          "answer": "Gentoo"
-        },
-        {
-          "id": "min-response",
-          "answer": "Adelie"
-        }
-      ]
-    },
-    "paintBrush_q1": {
-      "baseComponent": "scatterPlot",
-      "instruction": "How many Adventure Movies have a production budget value greater than 100 million?",
-      "parameters": {
-        "dataset": "movies",
-        "x": "Production Budget",
-        "y": "Gross Income",
-        "category": "Genre",
-        "ids": "id",
-        "brushType": "Paintbrush Selection"
-      },
-      "response": [
-        {
-          "id": "response",
-          "prompt": "Answer:",
-          "required": true,
-          "location": "sidebar",
-          "type": "numerical",
-          "max": 100,
-          "min": 0
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": "response",
-          "answer": 28
-        }
-      ]
-    },
-    "paintBrush_q2": {
-      "baseComponent": "scatterPlot",
-      "instruction": "Consider only movies that had a production budget greater than 100 million and made less than 150  Million in Gross income. Which genres had the most and the least movies in this group of movies? ",
-      "parameters": {
-        "dataset": "movies",
-        "x": "Production Budget",
-        "y": "Gross Income",
-        "category": "Genre",
-        "ids": "id",
-        "brushType": "Paintbrush Selection"
-      },
-      "response": [
-        {
-          "id": "max-response",
-          "prompt": "Most common Genre:",
-          "required": true,
-          "location": "sidebar",
-          "type": "dropdown",
-          "options": [
-            "Action",
-            "Adventure",
-            "Comedy",
-            "Drama"
-          ]
-        },
-        {
-          "id": "min-response",
-          "prompt": "Least common Genre:",
-          "required": true,
-          "location": "sidebar",
-          "type": "dropdown",
-          "options": [
-            "Action",
-            "Adventure",
-            "Comedy",
-            "Drama"
-          ]
-        }
-      ],
-      "correctAnswer": [
-        {
-          "id": "max-response",
-          "answer": "Action"
-        },
-        {
-          "id": "min-response",
-          "answer": "Comedy"
         }
       ]
     },
@@ -487,15 +266,10 @@
     "components": [
       "introduction",
       "introduction_2",
-      "tutorial",
-      "paintBrush_q1",
-      "paintBrush_q2",
-      "rectangleBrush_q1",
-      "rectangleBrush_q2",
-      "axisBrush_q1",
-      "axisBrush_q2",
-      "sliderBrush_q1",
-      "sliderBrush_q2",
+      "instructions",
+      "q1",
+      "q2",
+      "q3",
       "post-study-survey",
       "survey"
     ]
