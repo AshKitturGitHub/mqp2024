@@ -620,33 +620,36 @@
         }
       ]
     },
-    "survey": {
+    "end_survey": {
       "type": "markdown",
-      "path": "demo-VLAT-mini-randomized/assets/survey.md",
+      "path": "demo-brush-interactions/assets/end_survey.md",
       "response": [
         {
-          "id": "surveyExperience",
-          "prompt": "Did you experience any problems with our tool?",
+          "id": "end_survey",
+          "prompt": "What did you think this survey was about?",
           "required": true,
           "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here."
+          "type": "longText"
         },
         {
-          "id": "surveyRenderIssues",
-          "prompt": "Did anything not render or display properly?",
+          "id": "end_survey",
+          "prompt": "Any comments regarding the survey?",
           "required": true,
           "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here"
+          "type": "longText"
         },
         {
-          "id": "surveyOtherIssues",
-          "prompt": "Any other issues or anything you would like to tell us?",
+          "id": "end_survey",
+          "prompt": "Have you seen any of these questions before?",
           "required": true,
           "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here"
+          "type": "radio",
+          "options": [
+            "Yes, definetly",
+            "Yes, but only the demographic questions",
+            "Maybe / I'm not sure",
+            "No"
+          ]
         }
       ]
     }
@@ -660,6 +663,7 @@
       "understanding_test_1",
       "understanding_test_2",
       "understanding_test_3",
+      "intro_to_graphs",
       "q1",
       "q2",
       "q3",
@@ -673,9 +677,8 @@
       "q6",
       "q7",
       "q8",
-      "intro_to_graphs",
       "post-study-survey",
-      "survey"
+      "end_survey"
     ]
   }
 }
