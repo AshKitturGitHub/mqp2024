@@ -286,35 +286,35 @@
       "path": "demo-brush-interactions/assets/graph1.md",
       "response": [
         {
-          "id": "graph1",
+          "id": "graph1_1",
           "prompt": "Please write down the FIRST conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph1",
+          "id": "graph1_2",
           "prompt": "Please write down the SECOND conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph1",
+          "id": "graph1_3",
           "prompt": "Please write down the THIRD conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph1",
+          "id": "graph1_4",
           "prompt": "Please write down the FOURTH conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph1",
+          "id": "graph1_5",
           "prompt": "Please write down the FIFTH conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
@@ -327,35 +327,35 @@
       "path": "demo-brush-interactions/assets/graph2.md",
       "response": [
         {
-          "id": "graph2",
+          "id": "graph2_1",
           "prompt": "Please write down the FIRST conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph2",
+          "id": "graph2_2",
           "prompt": "Please write down the SECOND conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph2",
+          "id": "graph2_3",
           "prompt": "Please write down the THIRD conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph2",
+          "id": "graph2_4",
           "prompt": "Please write down the FOURTH conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph2",
+          "id": "graph2_5",
           "prompt": "Please write down the FIFTH conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
@@ -368,35 +368,35 @@
       "path": "demo-brush-interactions/assets/graph3.md",
       "response": [
         {
-          "id": "graph3",
+          "id": "graph3_1",
           "prompt": "Please write down the FIRST conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph3",
+          "id": "graph3_2",
           "prompt": "Please write down the SECOND conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph3",
+          "id": "graph3_3",
           "prompt": "Please write down the THIRD conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph3",
+          "id": "graph3_4",
           "prompt": "Please write down the FOURTH conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph3",
+          "id": "graph3_5",
           "prompt": "Please write down the FIFTH conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
@@ -409,35 +409,35 @@
       "path": "demo-brush-interactions/assets/graph4.md",
       "response": [
         {
-          "id": "graph4",
+          "id": "graph4_1",
           "prompt": "Please write down the FIRST conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph4",
+          "id": "graph4_2",
           "prompt": "Please write down the SECOND conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph4",
+          "id": "graph4_3",
           "prompt": "Please write down the THIRD conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph4",
+          "id": "graph4_4",
           "prompt": "Please write down the FOURTH conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
           "type":"shortText"
         },
         {
-          "id": "graph4",
+          "id": "graph4_5",
           "prompt": "Please write down the FIFTH conclusion you drew from this data.",
           "required": true,
           "location": "belowStimulus",
