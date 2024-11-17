@@ -255,6 +255,110 @@
         }
       ]
     },
+    "q5": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/q5.md",
+      "response": [
+        {
+          "id": "q5-response",
+          "prompt": "How correlated do you think the data looks?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "0",
+            "0.1",
+            "0.2",
+            "0.3",
+            "0.4",
+            "0.5",
+            "0.6",
+            "0.7",
+            "0.8",
+            "0.9",
+            "1"
+          ]
+        }
+      ]
+    },
+    "q6": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/q6.md",
+      "response": [
+        {
+          "id": "q6-response",
+          "prompt": "How correlated do you think the data looks?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "0",
+            "0.1",
+            "0.2",
+            "0.3",
+            "0.4",
+            "0.5",
+            "0.6",
+            "0.7",
+            "0.8",
+            "0.9",
+            "1"
+          ]
+        }
+      ]
+    },
+    "q7": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/q7.md",
+      "response": [
+        {
+          "id": "q7-response",
+          "prompt": "How correlated do you think the data looks?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "0",
+            "0.1",
+            "0.2",
+            "0.3",
+            "0.4",
+            "0.5",
+            "0.6",
+            "0.7",
+            "0.8",
+            "0.9",
+            "1"
+          ]
+        }
+      ]
+    },
+    "q8": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/q8.md",
+      "response": [
+        {
+          "id": "q5-response",
+          "prompt": "How correlated do you think the data looks?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "0",
+            "0.1",
+            "0.2",
+            "0.3",
+            "0.4",
+            "0.5",
+            "0.6",
+            "0.7",
+            "0.8",
+            "0.9",
+            "1"
+          ]
+        }
+      ]
+    },
     "post-study-survey": {
       "type": "questionnaire",
       "response": [
@@ -351,6 +455,11 @@
       "q1",
       "q2",
       "q3",
+      "q5",
+      "q6",
+      "q7",
+      "q8",
+      "intro_to_graphs",
       "post-study-survey",
       "survey"
     ]
