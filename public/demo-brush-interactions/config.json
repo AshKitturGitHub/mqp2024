@@ -359,86 +359,127 @@
         }
       ]
     },
-    "post-study-survey": {
-      "type": "questionnaire",
+    "demographics": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/demographics.md",
       "response": [
         {
-          "id": "q1",
-          "prompt": "How useful did you find the rectangular selection method? ",
+          "id": "year-born-response",
+          "prompt": "What year were you born?",
           "required": true,
-          "location": "aboveStimulus",
-          "type": "likert",
-          "numItems": 7,
-          "rightLabel": "Like",
-          "leftLabel": "Dislike"
+          "location": "belowStimulus",
+          "type": "shortText"
         },
         {
-          "id": "q2",
-          "prompt": "How useful did you find the axis-aligned selection? ",
+          "id": "gender-response",
+          "prompt": "What is your gender?",
           "required": true,
-          "location": "aboveStimulus",
-          "type": "likert",
-          "numItems": 7,
-          "rightLabel": "Like",
-          "leftLabel": "Dislike"
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "Man",
+            "Woman",
+            "Non-binary",
+            "Prefer not to disclose",
+            "Other"
+          ]
         },
         {
-          "id": "q3",
-          "prompt": "How useful did you find the paint-brush selection?",
+          "id": "political-response",
+          "prompt": "What is the highest level of school you have completed or the highest degree you have received?",
           "required": true,
-          "location": "aboveStimulus",
-          "type": "likert",
-          "numItems": 7,
-          "rightLabel": "Like",
-          "leftLabel": "Dislike"
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "Less than high school degree",
+            "High school graduate (high school diploma or equivalent including GED)",
+            "Some college but no degree",
+            "Associate degree in college (2-year)",
+            "Bachelor's degree in college (4-year)",
+            "Master's degree",
+            "Doctoral degree",
+            "Professional degree (JD, MD)",
+            "Prefer not to answer"
+          ]
         },
         {
-          "id": "q4",
-          "prompt": "How useful did you find the slider selection?",
+          "id": "political-response",
+          "prompt": "On this 7-point scale of political views from extremely liberal (left) to  extremely conservative (right) where would you place yourself on this scale?",
           "required": true,
-          "location": "aboveStimulus",
-          "type": "likert",
-          "numItems": 7,
-          "rightLabel": "Like",
-          "leftLabel": "Dislike"
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7"
+          ]
         },
         {
-          "id": "q5",
-          "prompt": "Please provide any comments about the different methods",
-          "required": false,
-          "location": "aboveStimulus",
-          "type": "longText",
-          "placeholder": "Enter your comments here"
+          "id": "statistics-response",
+          "prompt": "How many years of experiences do you have studying statistics? (enter a number)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText"
+        },
+        {
+          "id": "research-response",
+          "prompt": "How many years of experiences do you have doing research? (enter a number)",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "shortText"
+        },
+        {
+          "id": "correlation-response",
+          "prompt": "How well do you understand correlation?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "Extremely Well",
+            "Very Well",
+            "Moderately Well",
+            "Slightly Well",
+            "Not Well at All"
+          ]
         }
       ]
     },
-    "survey": {
+    "specific-added-questions": {
       "type": "markdown",
-      "path": "demo-VLAT-mini-randomized/assets/survey.md",
+      "path": "demo-brush-interactions/assets/specific-added-questions.md",
       "response": [
         {
-          "id": "surveyExperience",
-          "prompt": "Did you experience any problems with our tool?",
+          "id": "specific-statistics-response",
+          "prompt": "How many years of experiences do you have studying statistics (e.g. doing experiments in a lab, collecting and analyzing data)? (enter a number)",
           "required": true,
           "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here."
+          "type": "shortText"
         },
         {
-          "id": "surveyRenderIssues",
-          "prompt": "Did anything not render or display properly?",
+          "id": "specific-research-response",
+          "prompt": "How many years of experiences do you have doing research (e.g. self-taught, taking classes)? (enter a number)",
           "required": true,
           "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here"
+          "type": "shortText"
         },
         {
-          "id": "surveyOtherIssues",
-          "prompt": "Any other issues or anything you would like to tell us?",
+          "id": "correlation-response",
+          "prompt": "How well do you understand correlation, after completing the training and tasks within this survey?",
           "required": true,
           "location": "belowStimulus",
-          "type": "longText",
-          "placeholder": "Enter your answer here"
+          "type": "radio",
+          "options": [
+            "Extremely Well",
+            "Very Well",
+            "Moderately Well",
+            "Slightly Well",
+            "Not Well at All"
+          ]
         }
       ]
     }
@@ -452,6 +493,7 @@
       "understanding_test_1",
       "understanding_test_2",
       "understanding_test_3",
+      "intro_to_graphs",
       "q1",
       "q2",
       "q3",
@@ -459,9 +501,8 @@
       "q6",
       "q7",
       "q8",
-      "intro_to_graphs",
-      "post-study-survey",
-      "survey"
+      "demographics",
+      "specific-added-questions"
     ]
   }
 }
