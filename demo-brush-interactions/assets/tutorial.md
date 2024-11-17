@@ -1,30 +1,23 @@
-# Tutorial
-In this study you will complete 8 tasks using 4 different ways to select points in a scatterplot. Utilize the selection type and the linked chart to answer the questions. Some of the questions will ask you to enter specific numbers, please estimate the best you can. The four selection types, with instructions on how to use them, are listed below. You can access this information during the study at any time via the help button in the upper left.
+# Instructions - Study Specifics
 
-## Axis Selection
+In this experiment, we will ask you to estimate the correlation between two variables.  
+Here are some examples of graphs with different correlations. Each dot represents one data point.  
+These data points are graphed along the X and Y axes.  
+Below is an example of a correlation of 0. This means that the two variables are not correlated at all.
 
-Use the handles on the x and y axis to edit the selection.
+<img src="./assets/img.png" width="auto" height="300px">
 
-<img src="./assets/axis.gif" width="auto" height="300px">
+Below are some examples of correlations ranging from 0.3 to 0.9.
 
-## Rectangular Selection
+<img src="./assets/img_1.png" width="auto" height="3 0px">
 
-Click and drag over the plot to create a selection. Drag the center or the edges of the rectangle to edit the selection.
+Correlations can also have negative values, ranging from 0 to -1.  
+While positive correlations indicate an increase in both variables, negative correlations indicate an increase in one variable and a decrease in the other.
 
-<img src="./assets/rectangleGif.gif" width="auto" height="300px">
+Below are examples of negative correlations ranging from -0.3 to -0.9.
 
+<img src="./assets/img_2.png" width="auto" height="3 0px">
 
-## Slider Selection
-
-Use the handles of the sliders to the right of the chart to edit the selection.
-
-<img src="./assets/sliderGif.gif" width="auto" height="300px">
-
-
-## Paintbrush Selection
-
-Click and drag to select points. Use the tool above the scatterplot to switch to deselect if you want to deselect points in your selection.
-
-<img src="./assets/paintbrush.gif" width="auto" height="300px">
-
+So, the closer the correlation is to 1 or -1, the stronger the relationship between the two variables.  
+The closer the correlation is to 0, the weaker the relationship between the two variables.
 
