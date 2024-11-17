@@ -255,6 +255,214 @@
         }
       ]
     },
+    "q4": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/q4.md",
+      "response": [
+        {
+          "id": "q4-response",
+          "prompt": "How correlated do you think the data looks?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "0",
+            "0.1",
+            "0.2",
+            "0.3",
+            "0.4",
+            "0.5",
+            "0.6",
+            "0.7",
+            "0.8",
+            "0.9",
+            "1"
+          ]
+        }
+      ]
+    },
+    "graph1": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/graph1.md",
+      "response": [
+        {
+          "id": "graph1",
+          "prompt": "Please write down the FIRST conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph1",
+          "prompt": "Please write down the SECOND conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph1",
+          "prompt": "Please write down the THIRD conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph1",
+          "prompt": "Please write down the FOURTH conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph1",
+          "prompt": "Please write down the FIFTH conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        }
+      ]
+    },
+    "graph2": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/graph2.md",
+      "response": [
+        {
+          "id": "graph2",
+          "prompt": "Please write down the FIRST conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph2",
+          "prompt": "Please write down the SECOND conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph2",
+          "prompt": "Please write down the THIRD conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph2",
+          "prompt": "Please write down the FOURTH conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph2",
+          "prompt": "Please write down the FIFTH conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        }
+      ]
+    },
+    "graph3": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/graph3.md",
+      "response": [
+        {
+          "id": "graph3",
+          "prompt": "Please write down the FIRST conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph3",
+          "prompt": "Please write down the SECOND conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph3",
+          "prompt": "Please write down the THIRD conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph3",
+          "prompt": "Please write down the FOURTH conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph3",
+          "prompt": "Please write down the FIFTH conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        }
+      ]
+    },
+    "graph4": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/graph4.md",
+      "response": [
+        {
+          "id": "graph4",
+          "prompt": "Please write down the FIRST conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph4",
+          "prompt": "Please write down the SECOND conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph4",
+          "prompt": "Please write down the THIRD conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph4",
+          "prompt": "Please write down the FOURTH conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        },
+        {
+          "id": "graph4",
+          "prompt": "Please write down the FIFTH conclusion you drew from this data.",
+          "required": true,
+          "location": "belowStimulus",
+          "type":"shortText"
+        }
+      ]
+    },
+    "check_3": {
+      "type": "markdown",
+      "path": "demo-brush-interactions/assets/check_3.md",
+      "response": [
+        {
+          "id": "check_3",
+          "prompt": "How many stores and companies were there?",
+          "required": true,
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "3 stores, 2 companies",
+            "2 stores, 3 companies",
+            "2 stores, 2 companies"
+          ]
+        }
+      ]
+    },
     "q5": {
       "type": "markdown",
       "path": "demo-brush-interactions/assets/q5.md",
@@ -455,6 +663,12 @@
       "q1",
       "q2",
       "q3",
+      "q4",
+      "graph1",
+      "graph2",
+      "graph3",
+      "graph4",
+      "check_3",
       "q5",
       "q6",
       "q7",
