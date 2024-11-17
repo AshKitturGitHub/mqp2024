@@ -1,21 +1,19 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v1.0.3/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
-    "title": "Interactive Selections in Scatterplots",
+    "title": "Motivated Scatterplots",
     "version": "pilot",
     "authors": [
-      "The reVISit Team"
+      "MQP 2024 reVISit team"
     ],
     "date": "2023-11-03",
-    "description": "A study comparing different selection mechanisms on scatterplots.",
+    "description": "Replication of the study 'Motivated Scatterplots'",
     "organizations": [
-      "University of Utah",
-      "WPI",
-      "University of Toronto"
+      "WPI"
     ]
   },
   "uiConfig": {
-    "contactEmail": "cnobre@cs.toronto.edu",
+    "contactEmail": "askittur@wpi.edu",
     "helpTextPath": "demo-brush-interactions/assets/tutorial.md",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": true,
@@ -40,40 +38,11 @@
       "path": "demo-brush-interactions/assets/introduction.md",
       "response": [
         {
-          "id": "prolificId",
-          "prompt": "Please enter your Prolific ID",
+          "id": "confirmationClick",
+          "prompt": "Please type your name and click next to continue to the survey.",
           "required": true,
           "location": "belowStimulus",
-          "type": "shortText",
-          "placeholder": "Prolific ID",
-          "paramCapture": "PROLIFIC_PID"
-        }
-      ]
-    },
-    "consent": {
-      "type": "markdown",
-      "path": "demo-brush-interactions/assets/consent.md",
-      "nextButtonText": "Agree",
-      "response": [
-        {
-          "id": "signature",
-          "prompt": "Your signature",
-          "required": true,
-          "location": "belowStimulus",
-          "type": "shortText",
-          "placeholder": "Please provide your signature"
-        },
-        {
-          "id": "accept",
-          "prompt": "Do you consent to the study and wish to continue?",
-          "required": true,
-          "requiredValue": "Accept",
-          "location": "belowStimulus",
-          "type": "radio",
-          "options": [
-            "Decline",
-            "Accept"
-          ]
+          "type": "shortText"
         }
       ]
     },
@@ -485,7 +454,6 @@
     "order": "fixed",
     "components": [
       "introduction",
-      "consent",
       "tutorial",
       {
         "order": "random",
